@@ -25,6 +25,7 @@ function js(){
 }
 
 //"!.js/vendor/**","!.js/install.js"
+//
 function build_js(){
 	return src(["./js/utils/*.js","./js/data/*.js","./js/main.js"])
     .pipe(concat('main.min.js'))
@@ -35,5 +36,5 @@ function build_js(){
 }
 
 exports.css = css;
-exports.js = build_js;
+exports.js = js;
 exports.default = ()=>{};

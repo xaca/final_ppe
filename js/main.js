@@ -1,7 +1,8 @@
 var secciones = [];
 var rutas = ["","index","acercade","servicios","mi_experiencia","portafolio","contacto"];
-var bajo_logeo = ["seccion_2","seccion_5"];
+var bajo_logeo = ["seccion_5"];
 var usuario_logeado = true;//Esto es una simulacion de acceso, asi no funciona en la realidad porque es inseguro
+var resultado;
 
 window.onload = init;
 
@@ -9,12 +10,51 @@ function init(){
     setTimeout(hideURLbar, 0);
     asignarVariables();
     asignarEventos();
+	
+
+	//new Splide( '.splide' ).mount();
+	
+	if(resultado)
+	{
+		traerDatos();
+	}
 }
+
+function traerDatos(){
+  fetch('https://api.randomuser.me/?results=9')
+  .then(response => response.json())
+  .then(data => pintarDatos(data));
+}
+
+function pintarDatos(data){
+  //console.dir(data);
+  //console.log(datos.name.first +" " + datos.name.last);
+  //console.log(datos.picture.medium);
+  var datos = data.results; 
+  var temp;
+  var ans = "";
+    
+	//console.log(data.results[0].name.first);
+
+	for(var i in datos)
+	{
+		temp = datos[i];
+		ans+= "<div class='usuario'><img class='img-circle' src='"+temp.picture.medium+"' />";
+		ans+= "<p>";
+		ans+= temp.name.first+" "+temp.name.last;
+		ans+= "</p></div>";
+	}
+
+	resultado.innerHTML = ans;
+
+}
+
 function hideURLbar() {
     window.scrollTo(0, 1);
 }
 
 function asignarVariables(){
+	resultado = document.getElementById("resultado");
 	secciones["seccion_1"]= document.getElementById("seccion_1");
 	secciones["seccion_2"]= document.getElementById("seccion_2");
 	secciones["seccion_3"]= document.getElementById("seccion_3");
@@ -48,7 +88,7 @@ function navegacion(event){
 	var indice = id.split("_")[1];
 	var ruta = rutas[indice]+".html";
 
-	if(controlAcceso(id) && usuario_logeado)
+	if(!controlAcceso(id) && usuario_logeado)
 	{
 		location.href = ruta;
 	}

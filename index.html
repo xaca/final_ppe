@@ -16,6 +16,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
 <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
 <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
+<link rel="stylesheet" href="css/splide/splide-skyblue.min.css">
 <!-- //css files -->
 
 <!-- google fonts -->
@@ -39,13 +40,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<input id="check02" type="checkbox" name="menu" />
 					<label for="check02"><span class="fa fa-bars" aria-hidden="true"></span></label>
 					<ul class="submenu">
-						<li><a href="index.html" class="active">Home</a></li>
-						<li><a href="#about">About Me</a></li>
-						<li><a href="#services">Services</a></li>
-						<li><a href="#experience">Experience</a></li>
-						<li><a href="#portfolio">Portfolio</a></li>
-						<li><a href="#testimonials">Testimonials</a></li>
-						<li><a href="#contact">Contact Me</a></li>
+						<li><a id="seccion_1" href="javascript:void(0);" class="active">Inicio</a></li>
+						<li><a id="seccion_2" href="javascript:void(0);">Acerca de</a></li>
+						<li><a id="seccion_3" href="javascript:void(0);">Servicios</a></li>
+						<li><a id="seccion_4" href="javascript:void(0);">Mi experiencia</a></li>
+						<li><a id="seccion_5" href="javascript:void(0);">Portafolio</a></li>
+						<li><a id="seccion_6" href="javascript:void(0);">Contacto</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -60,23 +60,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div id="home" class="banner-w3pvt d-flex">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-7 bnr-txt-w3pvt">
-				<div class="bnr-w3pvt-txt mt-sm-5">
-					<h6>Welcome to my Client template</h6>
-					<h2>Hello <span>I'm John Watson</span></h2>
-					<h4>designer - developer - freelancer</h4>
-					<p class="mt-4"> Auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-						Vivamus suscipit tortor eget felis porttitor volutpat. Mauris blandit aliquet elit.</p>
-					<ul class="social_section_1info mt-4">
-						<li class="mb-2 facebook"><a href="#"><span class="fa fa-facebook"></span></a></li>
-						<li class="mb-2 twitter"><a href="#"><span class="fa fa-twitter"></span></a></li>
-						<li class="linkedin"><a href="#"><span class="fa fa-linkedin"></span></a></li>
-						<li class="pinterest"><a href="#"><span class="fa fa-pinterest"></span></a></li>
-					</ul>
-					<a href="#about" class="scroll bnr-btn mr-2">Read more </a>
-					<a href="#contact" class="scroll bnr-btn1">Contact Me </a>
-				</div>
+
+		<div class="splide">
+			<div class="splide__track">
+				<ul class="splide__list">
+					<li class="splide__slide">Slide 01</li>
+					<li class="splide__slide">Slide 02</li>
+					<li class="splide__slide">Slide 03</li>
+				</ul>
 			</div>
+		</div>
+
+
+		<!--
+		<div class="col-lg-7 bnr-txt-w3pvt">
+			<div class="bnr-w3pvt-txt mt-sm-5">
+				<h6>Welcome to my Client template</h6>
+				<h2>Hello <span>I'm John Watson</span></h2>
+				<h4>designer - developer - freelancer</h4>
+				<p class="mt-4"> Auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+					Vivamus suscipit tortor eget felis porttitor volutpat. Mauris blandit aliquet elit.</p>
+				<ul class="social_section_1info mt-4">
+					<li class="mb-2 facebook"><a href="#"><span class="fa fa-facebook"></span></a></li>
+					<li class="mb-2 twitter"><a href="#"><span class="fa fa-twitter"></span></a></li>
+					<li class="linkedin"><a href="#"><span class="fa fa-linkedin"></span></a></li>
+					<li class="pinterest"><a href="#"><span class="fa fa-pinterest"></span></a></li>
+				</ul>
+				<a href="#about" class="scroll bnr-btn mr-2">Read more </a>
+				<a href="#contact" class="scroll bnr-btn1">Contact Me </a>
+			</div>
+		</div>
+		
+		-->
 		</div>
 	</div>
 </div>
@@ -379,6 +394,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</a>
 </div>
 <!-- move top -->
+<script src="js/librerias/splide.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
