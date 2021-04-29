@@ -3,6 +3,7 @@ var rutas = ["","index","acercade","servicios","mi_experiencia","portafolio","co
 var bajo_logeo = ["seccion_5"];
 var usuario_logeado = true;//Esto es una simulacion de acceso, asi no funciona en la realidad porque es inseguro
 var resultado;
+var slides;
 
 window.onload = init;
 
@@ -11,7 +12,10 @@ function init(){
     asignarVariables();
     asignarEventos();
 	
-	new Splide( '.splide',{type:'loop',autoplay:true} ).mount();
+	if(slides)
+	{
+		new Splide( '.splide',{type:'loop',autoplay:true} ).mount();
+	}
 	
 	if(resultado)
 	{
@@ -54,6 +58,7 @@ function hideURLbar() {
 
 function asignarVariables(){
 	resultado = document.getElementById("resultado");
+	slides = document.getElementById("slide_01");
 	secciones["seccion_1"]= document.getElementById("seccion_1");
 	secciones["seccion_2"]= document.getElementById("seccion_2");
 	secciones["seccion_3"]= document.getElementById("seccion_3");
