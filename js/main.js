@@ -11,8 +11,7 @@ function init(){
     asignarVariables();
     asignarEventos();
 	
-
-	//new Splide( '.splide' ).mount();
+	new Splide( '.splide',{type:'loop',autoplay:true} ).mount();
 	
 	if(resultado)
 	{

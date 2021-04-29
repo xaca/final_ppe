@@ -236,16 +236,33 @@ a.scroll.bnr-btn i{
 
 /* banner */
 
-.banner-w3pvt {
-	/*background: url(../images/banner.jpg) no-repeat center;
-	background-size: cover;
-	position: relative;*/
+.splide {
+    position: relative;
     width: 100%;
     height: 600px;
-    background: #a86161;
     top: 0px;
     left: 0px;
-    position: relative;
+}
+.splide__track{
+    top: 100px;
+    width: 100%;
+    height: 450px;
+}
+.slide{
+    background-size:contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height:450px;
+}
+#slide_01{
+    background-image:url(../images/mountains-100367_640.jpg);
+}
+#slide_02{
+    background-image:url(../images/tree-276014_640.jpg);
+}
+#slide_03{
+    background-image:url(../images/tree-736877_640.jpg);
 }
 
 .bnr-txt-w3pvt {
